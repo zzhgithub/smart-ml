@@ -5,4 +5,5 @@
   :licence "BSD-style"
 ;  :depends-on (:cl)
   :components ((:file "package")
-               (:file "test" :depends-on ("package"))))
+               (:file "test" :depends-on ("package"))
+               (:file "perceptron" :depends-on ("package"))))
