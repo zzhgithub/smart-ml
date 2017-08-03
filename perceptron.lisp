@@ -1,11 +1,11 @@
 (in-package :smart-ml)
 
-;;感知器 文件
+;;感知器(监督学习) 文件
 
 ;;学习结果的值 保存的是 向量w 和 位移b
 ;;比如(:w (1 2 3 4) b:(3))
 ;; todo 这应该有设置和保存和清除的方法
-(defparameter *lr* nil)
+(defparameter *perceptron-lr* nil)
 
 ;; 感知器的学习方法
 ;; 其中X{x_i} i(1-N)是N维度(特征)的输入
