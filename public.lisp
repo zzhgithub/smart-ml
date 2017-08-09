@@ -2,6 +2,13 @@
 
 ;; 公共方法
 
+(defun get-feature-length (x)
+  "获取样本的特征空间的大小"
+  (let ((feature 0))
+    (dolist (tmp x 'done)
+      (setf feature (list-length tmp)))
+    feature))
+
 (defun dump-data-info (x)
   "打印出入参数据的信息，方便计算和统计。元素个数，维度特征数"
   (let ((feature 0)
