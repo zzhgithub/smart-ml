@@ -2,6 +2,13 @@
 
 ;;感知器(监督学习) 文件
 
+;;这里使用默认学习的时候的位移值位1
+(defparameter *move* 1)
+
+;; 设置学习时的参数
+(defun set-move (x)
+  (if (integerp x) (setf *move* x) 'WrongType))
+
 ;; 定义学习结果数据结构
 ;; 其中w 是一个向量 b 是一个值
 (defstruct p-l-r
@@ -12,7 +19,6 @@
 ;;比如(:w (1 2 3 4) b:(3))
 ;; todo 这应该有设置和保存和清除的方法
 (defparameter *perceptron-lr* nil)
-
 
 ;; 根据输入的x 来生成一会初始化的w 和b 返回的数据类型是 p-l-r
 (defun init-p-l-r (x)
@@ -29,7 +35,9 @@
 ;; Y 是与X中元素一一对应的值(-1,+1)
 ;; 注意这里循环的时候要
 (defun perceptron-learn (X Y)
-  )
+  (let ((lr (init-p-l-r X)))
+    ;;开始循环
+   ))
 
 ;;感知器预测方法
 ;;需要判断学习结果的值
